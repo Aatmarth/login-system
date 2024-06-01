@@ -1,0 +1,24 @@
+<%- include('header')-%>
+    <div class="container">
+        <div class="row">
+            <div class="card col-md-6 ">
+              <form  class="box" action="/login"  method="post">
+                <h1>Login</h1>
+                <p class="text-white">Please enter your username and password!</p>
+                <input type="text" name="name" placeholder="Username" />
+                <input type="password" name="pass" placeholder="Password" />
+                <%if(locals.message){ %>
+                    <h4 class="text-danger"><%= message %></h4>
+                <% } %>
+                <%if(locals.success){ %>
+                    <h4 class="text-success"><%= success %></h4>
+                <% } %>
+                <button type="submit" name="submit" value="Login">Submit</button>
+              </form>
+            </div>
+        </div>
+      </div>
+      
+
+</body>
+</html>
